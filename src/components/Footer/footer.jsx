@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className="footer">
             <Logo className="white-logo" />
-            <p>&copy; 2020 Kasa. All rights reserved</p>
+            <p>&copy; 2023 Kasa. All rights reserved</p>
         </div>
     );
 };

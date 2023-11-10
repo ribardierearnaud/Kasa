@@ -3,7 +3,9 @@ $primary-color: #FF6060;
 
 $secondary-color: #FFF;
 
-$bg-color: #FFF;
+$primary-bg-color: #FFF;
+
+$secondary-bg-color: #F6F6F6;
 
 $bg-content: #F0F0F0;
 
@@ -17,7 +19,7 @@ html {
     font-size: 18px;
     color: $primary-color;
     font-family: 'Montserrat';
-    background: $bg-color;
+    background: $primary-bg-color;
 }
 
 a {
