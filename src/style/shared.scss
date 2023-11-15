@@ -25,3 +25,9 @@ html {
 a {
     font-family: 'Montserrat';
 }
+
+@media(max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}

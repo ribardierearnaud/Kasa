@@ -4,12 +4,13 @@ import { NavLink } from "react-router-dom";
 const Card = (props) => {
     return (
         <NavLink
-            className="card overlay"
+            className="card"
             to={`/housing/${props.logement.id}`}
         >
             <article key={props.logement.id}>
                 <img src={props.logement.cover} alt={props.logement.title} />
-                <p>{props.logement.title}</p>
+                <div className="overlay"></div>
+                <h2>{props.logement.title}</h2>
             </article>
         </NavLink>
     );

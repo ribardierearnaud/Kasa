@@ -10,6 +10,8 @@
 
 .colored-logo{
     fill: $primary-color;
+    width: 150px;
+    min-width: 100%;
 }
 
 .home{
@@ -41,10 +43,23 @@
     color: $primary-color;
 }
 
+.logo {
+    width: 200px;
+}
+
 @media screen and (max-width: 768px) {
 
     .navigation a{
         text-transform: uppercase;
+        font-size: 18px;
     }
 
+    .logo {
+        width: 120px;
+    }
+
+    .navigation ul{
+
+      gap: 10px;
+    }
 }

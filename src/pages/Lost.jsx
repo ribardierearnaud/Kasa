@@ -1,11 +1,12 @@
-import React from 'react';
+import '../style/app.scss';
+import Lost from '../components/Lost/lost';
 
-function Lost() {
+const Home = () => {
   return (
-    <div>
-      <h1>Oups 🙈 Cette page n'existe pas</h1>
-    </div>
+      <div className="home">
+          <Lost  />
+      </div>
   );
-}
+};
 
-export default Lost;
+export default Home;
