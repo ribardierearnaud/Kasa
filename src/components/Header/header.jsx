@@ -6,9 +6,9 @@ import { ReactComponent as Logo } from '../../medias/logo/logo-kasa.svg';
 const Header = () => {
     return (
         <header className='header'>
-            <div className='logo'>
+            <NavLink className='logo' title='Accueil' end to='/'>
                 <Logo className="colored-logo"/>
-            </div>
+            </NavLink>
             <nav className='navigation'>
                 <ul>
                     <li className='links'>
