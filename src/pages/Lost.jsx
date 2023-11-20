@@ -1,12 +1,12 @@
 import '../style/app.scss';
 import Lost from '../components/Lost/lost';
 
-const Home = () => {
+const Error = () => {
   return (
-      <div className="home">
+      <div className="lost">
           <Lost  />
       </div>
   );
 };
 
-export default Home;
+export default Error;
