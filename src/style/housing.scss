@@ -31,7 +31,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    margin: 5px ;
+    gap: 15px;
 }
+
+.rating {
+
+    .star {
+        color: $primary-color;
+        padding-left: 5px;
+    }
+
+    .emptyStar {
+        color: $third-color;
+        padding-left: 5px;
+    }
+}
+
+
 
 .logementHost {
     align-items: center;
@@ -39,6 +56,8 @@
     flex-direction: row-reverse;
     gap: 0 10px;
     justify-content: flex-end;
+    padding: 0px;
+    margin: 0px;
 
     img {
         border-radius: 50%;
@@ -49,22 +68,33 @@
     }
 }
 
-.logementWithoutCollapses {
+.logementTag {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0.2rem;
+
+    li {
+        display: inline-block;
+        background-color: $primary-color;
+        border-radius: .5rem;
+        color: $secondary-color;
+        font-size: 15px;
+        margin: 1rem 1rem 0 0;
+        padding: .2rem 1.2rem;
+}
 }
 
 .collapses {
     display: flex;
     flex-direction: row;
     justify-content: space-between;;
-    max-width: 45%;
-    gap: 30px;
+    margin-top: 1.2rem;
+}
 
-    .collapse-title {
-        display: block;
-        width: 500px;
-        background-color: $primary-color;
-    }
+.logementWithoutCollapses {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

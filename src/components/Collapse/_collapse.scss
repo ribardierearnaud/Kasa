@@ -1,0 +1,35 @@
+@import "../../style/shared.scss";
+
+.collapse {
+    display: flex;
+    flex-direction: column;
+    max-width: 47%;
+
+    &-header {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        background-color: $primary-color;
+        color: $secondary-color;
+        padding: 0.5rem 1rem;
+        border-radius: .3rem;
+    }
+
+    &-title {
+        display: block;
+        width: 600px;
+    }
+
+    &-content {
+        max-width: 95%;
+        padding: 10px 20px;
+        background-color: $secondary-bg-color;
+
+        ul {
+            list-style-type: none;
+            list-style-position: inside;
+            margin: 2px;
+            padding: 0px
+        }
+    }
+}

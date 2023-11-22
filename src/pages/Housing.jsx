@@ -8,29 +8,33 @@ import Collapse from '../components/Collapse/collapse';
 
 const Housing = () => {
   const { id } = useParams();
-  const logement = LogementsData.find(logement => logement.id === id)
+  const logement = LogementsData.find(logement => logement.id === id);
 
   // Vérifier si l'ID de la maison est valide
-  const isIdValid = LogementsData.some((logement) => logement.id === id);
+  const isIdValid = !!logement;
 
   // Récupérer les images uniquement si l'ID de la maison est valide
-  const allImages = isIdValid ? LogementsData.find((logement) => logement.id === id)?.pictures : [];
+  const allImages = isIdValid ? logement?.pictures || [] : [];
 
   // Mettre à jour la liste d'images si l'ID de la maison change
   const [images, setImages] = useState(allImages);
 
   useEffect(() => {
     if (isIdValid) {
-      const newImages = LogementsData.find((logement) => logement.id === id)?.pictures || [];
+      const newImages = logement?.pictures || [];
       setImages(newImages);
     }
   }, [id, isIdValid]);
+
+  if (!isIdValid || !logement) {
+    return <Lost />;
+  }
 
   return (
     <main className='logementAll'>
       <article>
         <section className="carousel">
-          {isIdValid ? <Carousel images={images} /> : <Lost />}
+          <Carousel images={images} />
         </section>
         <section className="logementCard">
           <div className='logementWithoutCollapses'>
@@ -52,18 +56,14 @@ const Housing = () => {
             </div>
           </div>
           <div className='collapses'>
-            <div className='descriptionCollapse'>
-              <Collapse collapseTitle='Description' collapseContent={logement.description} />
-            </div>
-            <div className='equipmentsCollapse'>
-              <Collapse 
-                collapseTitle='Équipements' 
-                collapseContent={logement.equipments.map((equipment, i) => (
-                  <ul key={i}>
-                    <li>{equipment}</li>
-                  </ul>
-                        ))} />
-            </div>
+            <Collapse collapseTitle='Description' collapseContent={logement.description} />
+            <Collapse 
+              collapseTitle='Équipements' 
+              collapseContent={logement.equipments.map((equipment, i) => (
+                <ul key={i}>
+                  <li>{equipment}</li>
+                </ul>
+              ))} />
           </div>
         </section>
       </article>

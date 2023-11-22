@@ -15,7 +15,7 @@ const Collapse = ({ collapseTitle, collapseContent }) => {
   return (
     <div className='collapse'>
       <div className='collapse-header' onClick={handleToggle}>
-        <span className='collapse-title'>{collapseTitle}</span>
+        <div className='collapse-title'>{collapseTitle}</div>
         <span className='collapse-icon'>{open ? angleUp : angleDown}</span>
       </div>
       {open && <div className='collapse-content'>{collapseContent}</div>}
