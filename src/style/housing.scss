@@ -1,0 +1,70 @@
+@import "./shared.scss";
+
+.logementAll {
+    max-width: 1240px;
+    width: 100%;
+    margin: 25px auto;
+}
+
+.logementIntro {
+    display: flex;
+    flex-direction: column;
+}
+
+.logementCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.logementTitle {
+    font-size: 36px;
+    margin: 25px 0px 0px 0px;
+}
+
+.logementLocation {
+    font-size: 18px;
+    margin: 0px;
+}
+
+.hostAndRating {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.logementHost {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0 10px;
+    justify-content: flex-end;
+
+    img {
+        border-radius: 50%;
+        height: 64px;
+        object-fit: cover;
+        object-position: center;
+        width: 64px;
+    }
+}
+
+.logementWithoutCollapses {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.collapses {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;;
+    max-width: 45%;
+    gap: 30px;
+
+    .collapse-title {
+        display: block;
+        width: 500px;
+        background-color: $primary-color;
+    }
+}

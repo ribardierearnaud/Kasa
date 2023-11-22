@@ -27,27 +27,29 @@ const Housing = () => {
   }, [id, isIdValid]);
 
   return (
-    <main>
+    <main className='logementAll'>
       <article>
         <section className="carousel">
           {isIdValid ? <Carousel images={images} /> : <Lost />}
         </section>
         <section className="logementCard">
-          <div className='logementIntro'>
-            <h1 className='logementTitle'>{logement.title}</h1>
-            <p className='logementLocation'>{logement.location}</p>
-            <ul className='logementTag'>
-              {logement.tags.map((tag, i) => (
-                <li key={i}>{tag}</li>
-              ))}
-            </ul>
-          </div>
-          <div className='hostAndRating'>
-            <figure className='logementHost'>
-              <img src={logement.host.picture} alt="Profil de l\'host" className='logementHostPicture'/>
-              <figcaption>{logement.host.name}</figcaption>
-            </figure>        
-            <Rating rate={logement.rating} />     
+          <div className='logementWithoutCollapses'>
+            <div className='logementIntro'>
+              <h1 className='logementTitle'>{logement.title}</h1>
+              <p className='logementLocation'>{logement.location}</p>
+              <ul className='logementTag'>
+                {logement.tags.map((tag, i) => (
+                  <li key={i}>{tag}</li>
+                ))}
+              </ul>
+            </div>
+            <div className='hostAndRating'>
+              <figure className='logementHost'>
+                <img src={logement.host.picture} alt="Profil de l\'host" className='logementHostPicture'/>
+                <figcaption>{logement.host.name}</figcaption>
+              </figure>        
+              <Rating rate={logement.rating} />     
+            </div>
           </div>
           <div className='collapses'>
             <div className='descriptionCollapse'>

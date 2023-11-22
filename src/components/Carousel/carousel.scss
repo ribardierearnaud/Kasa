@@ -1,0 +1,40 @@
+.carousel {
+
+    position: relative;
+    max-width: 1240px;
+    margin: auto;
+    height: 415px;
+    overflow: hidden;
+    color: white;
+
+    img {
+    border-radius: 25px;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    }
+
+    .prevIMG, .nextIMG {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        font-size: 3em;
+    }
+
+    .prevIMG {
+        left: 20px;
+    }
+
+    .nextIMG {
+        right: 20px;
+    }
+
+    .currentImageIndex {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        font-size: 18px;
+    }
+}
