@@ -1,4 +1,6 @@
 @use "./shared.scss";
+@use "./housing.scss";
+@use "./about.scss";
 @use "../components/Header/header";
 @use "../components/Banner/banner";
 @use "../components/Footer/footer";
@@ -6,5 +8,4 @@
 @use "../components/Card/card.scss";
 @use "../components/Lost/lost.scss";
 @use "../components/Carousel/carousel.scss";
-@use "./housing.scss";
-@use "../components/Collapse/collapse"
+@use "../components/Collapse/collapse";

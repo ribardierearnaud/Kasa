@@ -3,7 +3,7 @@
 .collapse {
     display: flex;
     flex-direction: column;
-    max-width: 47%;
+    max-width: 1024px;
 
     &-header {
         margin-top: 1rem;
@@ -21,7 +21,6 @@
     }
 
     &-content {
-        max-width: 95%;
         padding: 10px 20px;
         background-color: $secondary-bg-color;
 
