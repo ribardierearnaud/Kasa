@@ -33,7 +33,7 @@
     .currentImageIndex {
         position: absolute;
         bottom: 10%;
-        left: 45%;
+        left: 49%;
         font-size: 18px;
     }
 }
@@ -42,5 +42,11 @@
 
     .carousel {
         height: 250px;
+
+        .currentImageIndex {
+            left: 45%;
+        }
     }
+
+
 }
