@@ -1,7 +1,6 @@
 .carousel {
 
     position: relative;
-    max-width: 1240px;
     margin: auto;
     height: 415px;
     overflow: hidden;
@@ -34,7 +33,14 @@
     .currentImageIndex {
         position: absolute;
         bottom: 10%;
-        left: 50%;
+        left: 45%;
         font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .carousel {
+        height: 250px;
     }
 }

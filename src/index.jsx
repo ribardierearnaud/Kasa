@@ -10,8 +10,10 @@ import Footer from './components/Footer/footer';
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
+      <div className='allExceptFooter'>
       <Header />
       <AppRoutes />
+      </div>
       <Footer />
     </Router>
   </React.StrictMode>

@@ -1,0 +1,33 @@
+.carousel {
+  position: relative;
+  margin: auto;
+  height: 415px;
+  overflow: hidden;
+  color: white;
+}
+.carousel img {
+  border-radius: 25px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.carousel .prevIMG, .carousel .nextIMG {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3em;
+}
+.carousel .prevIMG {
+  left: 20px;
+}
+.carousel .nextIMG {
+  right: 20px;
+}
+.carousel .currentImageIndex {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  font-size: 18px;
+}/*# sourceMappingURL=carousel.css.map */

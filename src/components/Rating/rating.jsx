@@ -13,7 +13,7 @@ const Rating = (rating) => {
   const range = [1, 2, 3, 4, 5];
 
   return (
-    <div className='rating'>
+    <div className='rating' aria-label={`${rate} étoiles sur 5`}>
       {range.map((rangeElem) =>
       rate >= rangeElem ? <span key={rangeElem.toString()} className='star'>{star}</span> : <span key={rangeElem.toString()} className='emptyStar'>{emptyStar}</span>
       )}

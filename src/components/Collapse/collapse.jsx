@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleUp, faAngleDown} from '@fortawesome/free-solid-svg-icons';
+import { faAngleUp} from '@fortawesome/free-solid-svg-icons';
 
 const angleUp = <FontAwesomeIcon icon={faAngleUp} />;
-const angleDown = <FontAwesomeIcon icon={faAngleDown} />;
 
 const Collapse = ({ collapseTitle, collapseContent }) => {
   const [open, setOpen] = useState(false);
@@ -11,14 +10,17 @@ const Collapse = ({ collapseTitle, collapseContent }) => {
   const handleToggle = () => {
     setOpen(!open);
   };
+  
 
   return (
-    <div className='collapse'>
+    <div className={`collapse ${open ? 'open' : ''}`}>
       <div className='collapse-header' onClick={handleToggle}>
         <div className='collapse-title'>{collapseTitle}</div>
-        <span className='collapse-icon'>{open ? angleUp : angleDown}</span>
+        <span className={`collapse-icon ${open ? 'rotate' : ''}`}>
+          <FontAwesomeIcon icon={faAngleUp} />
+        </span>
       </div>
-      {open && <div className='collapse-content'>{collapseContent}</div>}
+      {<div className='collapse-content'>{collapseContent}</div>}
     </div>
   );
 };

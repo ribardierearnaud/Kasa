@@ -12,6 +12,10 @@
     }
     article {
       height: 300px;
+
+      @media screen and (max-width: 768px) {
+        height: 200px;
+      }
     }
     img {
       width: 100%;
@@ -36,4 +40,8 @@
   height: 50%;
   width: 100%;
   z-index: 1;
+
+  @media screen and (max-width: 768px) {
+  bottom: 103px;
+  }
 }

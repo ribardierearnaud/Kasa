@@ -28,7 +28,6 @@
 
 .navigation li{
     list-style-type: none;
-    font-size: 19px;
     margin: 1rem .5rem;
     color: $primary-color;
 }
@@ -43,9 +42,7 @@
     color: $primary-color;
 }
 
-.logo {
-    width: 200px;
-}
+
 
 @media screen and (max-width: 768px) {
 
@@ -54,12 +51,20 @@
         font-size: 18px;
     }
 
-    .logo {
-        width: 120px;
+    .colored-logo {
+        width: 115px;
     }
 
     .navigation ul{
-
+        padding-left: 10px;
       gap: 10px;
+    }
+
+    .navigation a{
+        font-size: 12px;
+    }
+
+    .navigation li {
+        margin: 0.5rem 0.2rem;
     }
 }

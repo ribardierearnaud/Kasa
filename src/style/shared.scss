@@ -28,6 +28,10 @@ a {
     font-family: 'Montserrat';
 }
 
+body {
+    margin: 0px;
+}
+
 @media(max-width: 768px) {
     html {
         font-size: 14px;

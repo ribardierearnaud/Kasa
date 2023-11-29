@@ -49,7 +49,7 @@ const Housing = () => {
             </div>
             <div className='hostAndRating'>
               <figure className='logementHost'>
-                <img src={logement.host.picture} alt="Profil de l\'host" className='logementHostPicture'/>
+                <img src={logement.host.picture} alt="Profil de l'host" className='logementHostPicture'/>
                 <figcaption>{logement.host.name}</figcaption>
               </figure>        
               <Rating rate={logement.rating} />     

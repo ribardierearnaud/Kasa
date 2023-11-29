@@ -9,3 +9,14 @@
 @use "../components/Lost/lost.scss";
 @use "../components/Carousel/carousel.scss";
 @use "../components/Collapse/collapse";
+
+.allExceptFooter {
+    max-width: 1240px;
+    margin: 20px auto;
+}
+
+@media screen and (max-width: 1240px) {
+    .allExceptFooter{
+        margin: 20px;
+    }
+}
