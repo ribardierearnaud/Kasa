@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Carousel from '../components/Carousel/Carousel';
+import Carousel from '../components/Carousel/carousel';
 import Lost from '../components/Lost/lost';
 import LogementsData from '../data/logements.json';
 import { useParams } from 'react-router-dom';
